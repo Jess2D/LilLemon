@@ -1,38 +1,30 @@
 import './App.css';
-import logo from './assets/ux/Logo .svg';
-import restaurant from './assets/images/restaurant.png'
+import Layout from "./components/Layout";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import BookingPage from "./components/BookingPage";
+import CallToAction from "./components/CallToAction"
+import CustomerSay from './components/CustomerSay';
+import Specials from './components/Specials';
+import NewZealand from './components/NewZealand';
+import Home from './components/Home';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="header-content">
-          <img src={logo} className="App-logo" alt="Logo" />
-          <nav>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#menu">Menu</a></li>
-              <li><a href="#reservations">Reservations</a></li>
-              <li><a href="#order">Online Order</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <main>
-        <section id="home" className="about">
-          <div className='text'>
-            <h1>Litle Lemon</h1>
-            <h2>New Zealand</h2>
-            <p>Delight in our exclusive dining experience where each dish tells a story of flavors and passion. Reserve your table today and embark on a culinary journey that awaits.</p>
-            <button> Reserve a Table</button>
-          </div>
-          <div className='restaurant-img'><img src={restaurant} className="restaurant" alt="Logo"></img></div>
-        </section>
-        <section id="menu" className="specials">Our Specials</section>
-        <section id="testimonials" className="testimonials">Testimonials</section>
-      </main>
-      <footer>Test Footer</footer>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/bookingPage" element={<BookingPage />} />
+            <Route path="/callToAction" element={<CallToAction />} />
+            <Route path="/customerSay" element={<CustomerSay />} />
+            <Route path="/speacials" element={<Specials />} />
+            <Route path="/about" element={<NewZealand />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
