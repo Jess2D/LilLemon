@@ -4,9 +4,9 @@ const Specials = () => {
   return (
     <>
       {" "}
-      <section id="menu" className="specials">
+      <div id="menu" className="specials">
         Our Specials
-      </section>
+      </div>
     </>
   );
 };

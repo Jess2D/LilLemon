@@ -1,5 +1,5 @@
 import React from "react";
-import restaurant from "..restaurant.png";
+import restaurant from "../assets/images/restaurant.png";
 
 const Home = () => {
   return (

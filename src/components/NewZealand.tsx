@@ -1,7 +1,7 @@
 import React from "react";
 
 const NewZealand = () => {
-  return <></>;
+  return <>test</>;
 };
 
 export default NewZealand;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import logo from "./assets/ux/Logo .svg";
-import Navbar from "./Nav";
+import logo from "../assets/ux/Logo .svg";
+import Navbar from "./Nav.tsx";
 
 function Layout() {
   return (
